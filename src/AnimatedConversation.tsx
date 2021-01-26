@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import Conversation from "./Conversation"
 import styles from "./AnimatedConversation.css"
 
-enum Direction {
+export enum Direction {
   inbound = "inbound",
   outbound = "outbound",
 }
@@ -22,19 +22,18 @@ function AnimatedConversation(params: Params) {
   const { className, messages } = params
   const [current, setCurrent] = useState(-1)
 
-  const runmessages = (current = 0) => {
+  const run = (current = 0) => {
     const item = messages[current]
     if (current < messages.length)
       setTimeout(() => {
         const next = current + 1
         setCurrent(next)
-
-        runmessages(next)
+        run(next)
       }, item.delay)
   }
 
-  useEffect(runmessages, [])
-  console.log("__dirname", __dirname)
+  useEffect(run, [])
+
   return (
     <div style={styles.container} className={className}>
       <img

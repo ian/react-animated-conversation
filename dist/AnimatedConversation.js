@@ -22,28 +22,28 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Direction = void 0;
 const react_1 = __importStar(require("react"));
 const Conversation_1 = __importDefault(require("./Conversation"));
 const AnimatedConversation_css_1 = __importDefault(require("./AnimatedConversation.css"));
 var Direction;
 (function (Direction) {
-    Direction["inbound"] = "inbound";
-    Direction["outbound"] = "outbound";
-})(Direction || (Direction = {}));
+    Direction["Inbound"] = "inbound";
+    Direction["Outbound"] = "outbound";
+})(Direction = exports.Direction || (exports.Direction = {}));
 function AnimatedConversation(params) {
     const { className, messages } = params;
     const [current, setCurrent] = react_1.useState(-1);
-    const runmessages = (current = 0) => {
+    const run = (current = 0) => {
         const item = messages[current];
         if (current < messages.length)
             setTimeout(() => {
                 const next = current + 1;
                 setCurrent(next);
-                runmessages(next);
+                run(next);
             }, item.delay);
     };
-    react_1.useEffect(runmessages, []);
-    console.log("__dirname", __dirname);
+    react_1.useEffect(run, []);
     return (react_1.default.createElement("div", { style: AnimatedConversation_css_1.default.container, className: className },
         react_1.default.createElement("img", { src: require("./assets/iPhoneX.png"), alt: "", style: { position: "absolute", width: " 100%", top: 0 } }),
         current >= 0 && react_1.default.createElement(Conversation_1.default, { messages: messages.slice(0, current) })));

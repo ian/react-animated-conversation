@@ -1,7 +1,7 @@
 /// <reference types="react" />
-declare enum Direction {
-    inbound = "inbound",
-    outbound = "outbound"
+export declare enum Direction {
+    Inbound = "inbound",
+    Outbound = "outbound"
 }
 declare type Message = {
     body: string;
