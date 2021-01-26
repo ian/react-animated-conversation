@@ -1,0 +1,31 @@
+{
+  "name": "react-animated-conversation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ian/react-animated-conversation.git"
+  },
+  "keywords": [
+    "react",
+    "conversation",
+    "sms"
+  ],
+  "author": "Ian Hunter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ian/react-animated-conversation/issues"
+  },
+  "homepage": "https://github.com/ian/react-animated-conversation#readme",
+  "dependencies": {
+    "react": ">16.8"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}
