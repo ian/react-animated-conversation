@@ -34,14 +34,14 @@ function AnimatedConversation(params: Params) {
   }
 
   useEffect(runmessages, [])
-
+  console.log("__dirname", __dirname)
   return (
     <div style={styles.container} className={className}>
-      {/* <img
-        src={require("../assets/iPhoneX.png")}
+      <img
+        src={require("./assets/iPhoneX.png")}
         alt=""
         style={{ position: "absolute", width: " 100%", top: 0 }}
-      /> */}
+      />
       {current >= 0 && <Conversation messages={messages.slice(0, current)} />}
     </div>
   )

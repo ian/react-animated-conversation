@@ -43,7 +43,10 @@ function AnimatedConversation(params) {
             }, item.delay);
     };
     react_1.useEffect(runmessages, []);
-    return (react_1.default.createElement("div", { style: AnimatedConversation_css_1.default.container, className: className }, current >= 0 && react_1.default.createElement(Conversation_1.default, { messages: messages.slice(0, current) })));
+    console.log("__dirname", __dirname);
+    return (react_1.default.createElement("div", { style: AnimatedConversation_css_1.default.container, className: className },
+        react_1.default.createElement("img", { src: require("./assets/iPhoneX.png"), alt: "", style: { position: "absolute", width: " 100%", top: 0 } }),
+        current >= 0 && react_1.default.createElement(Conversation_1.default, { messages: messages.slice(0, current) })));
 }
 exports.default = AnimatedConversation;
 //# sourceMappingURL=AnimatedConversation.js.map
