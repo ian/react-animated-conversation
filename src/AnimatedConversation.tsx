@@ -1,8 +1,24 @@
 import React, { useEffect, useState } from "react"
 import Conversation from "./Conversation"
-// import styles from "./AnimatedConversation.css"
+import styles from "./AnimatedConversation.css"
 
-function AnimatedConversation(params) {
+enum Direction {
+  inbound = "inbound",
+  outbound = "outbound",
+}
+
+type Message = {
+  body: string
+  delay?: number
+  direction: Direction
+}
+
+type Params = {
+  className?: string
+  messages: Message[]
+}
+
+function AnimatedConversation(params: Params) {
   const { className, messages } = params
   const [current, setCurrent] = useState(-1)
 
@@ -20,10 +36,7 @@ function AnimatedConversation(params) {
   useEffect(runmessages, [])
 
   return (
-    <div
-      // style={styles.container}
-      className={className}
-    >
+    <div style={styles.container} className={className}>
       {/* <img
         src={require("../assets/iPhoneX.png")}
         alt=""

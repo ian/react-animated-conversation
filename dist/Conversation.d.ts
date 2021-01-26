@@ -1,1 +1,2 @@
-export default function Conversation(props: any): any;
+/// <reference types="react" />
+export default function Conversation(props: any): JSX.Element;

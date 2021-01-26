@@ -1,8 +1,12 @@
 {
   "name": "react-animated-conversation",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "React animated SMS conversation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,10 +26,12 @@
     "url": "https://github.com/ian/react-animated-conversation/issues"
   },
   "homepage": "https://github.com/ian/react-animated-conversation#readme",
-  "dependencies": {
-    "react": ">16.8"
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "devDependencies": {
+    "@types/react": "^17.0.0",
     "typescript": "^4.1.3"
   }
 }

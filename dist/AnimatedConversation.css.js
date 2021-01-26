@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
-    "container": {
+    container: {
         display: "flex",
         alignItems: "center",
         alignContent: "center",
@@ -14,17 +14,17 @@ exports.default = {
         borderBottom: "solid 1px #eee",
         overflow: "hidden",
         borderTopLeftRadius: "47px",
-        borderTopRightRadius: "47px"
+        borderTopRightRadius: "47px",
     },
-    "messages": {
+    messages: {
         listStyle: "none",
         margin: "0",
         paddingTop: "10px",
         paddingLeft: "25px",
         paddingRight: "25px",
-        paddingBottom: "10px"
+        paddingBottom: "10px",
     },
-    "message": {
+    message: {
         display: "inline-block",
         clear: "both",
         padding: "8px 15px",
@@ -33,9 +33,9 @@ exports.default = {
         fontFamily: "Helvetica, Arial, sans-serif",
         fontSize: "12px",
         marginTop: "5px",
-        maxWidth: "85%"
+        maxWidth: "85%",
     },
-    "them": { background: "#eee", cssFloat: "left" },
-    "me": { cssFloat: "right", background: "#0084ff", color: "#fff" }
+    them: { background: "#eee", cssFloat: "left" },
+    me: { cssFloat: "right", background: "#0084ff", color: "#fff" },
 };
 //# sourceMappingURL=AnimatedConversation.css.js.map

@@ -6,7 +6,7 @@ export default function Conversation(props) {
 
   return (
     <>
-      <ul className={styles.messages}>
+      <ul style={styles.messages}>
         {messages.map((msg, i) => (
           <li
             key={i}

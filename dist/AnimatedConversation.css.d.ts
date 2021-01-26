@@ -3,12 +3,12 @@ declare const _default: {
         display: string;
         alignItems: string;
         alignContent: string;
-        flexDirection: string;
+        flexDirection: "column";
         justifyContent: string;
         width: string;
         height: string;
         backgroundColor: string;
-        position: string;
+        position: "relative";
         borderBottom: string;
         overflow: string;
         borderTopLeftRadius: string;

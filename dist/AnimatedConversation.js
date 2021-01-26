@@ -24,6 +24,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
 const Conversation_1 = __importDefault(require("./Conversation"));
+const AnimatedConversation_css_1 = __importDefault(require("./AnimatedConversation.css"));
+var Direction;
+(function (Direction) {
+    Direction["inbound"] = "inbound";
+    Direction["outbound"] = "outbound";
+})(Direction || (Direction = {}));
 function AnimatedConversation(params) {
     const { className, messages } = params;
     const [current, setCurrent] = react_1.useState(-1);
@@ -37,7 +43,7 @@ function AnimatedConversation(params) {
             }, item.delay);
     };
     react_1.useEffect(runmessages, []);
-    return (react_1.default.createElement("div", { className: className }, current >= 0 && react_1.default.createElement(Conversation_1.default, { messages: messages.slice(0, current) })));
+    return (react_1.default.createElement("div", { style: AnimatedConversation_css_1.default.container, className: className }, current >= 0 && react_1.default.createElement(Conversation_1.default, { messages: messages.slice(0, current) })));
 }
 exports.default = AnimatedConversation;
 //# sourceMappingURL=AnimatedConversation.js.map
