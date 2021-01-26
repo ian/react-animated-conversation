@@ -1,5 +1,7 @@
 # react-animated-conversation
 
+![demo](./demo.gif)
+
 We had a need for a phone-like SMS conversation on one of our projects.
 
 Supports:
