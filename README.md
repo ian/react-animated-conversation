@@ -32,35 +32,39 @@ function MyComponent() {
 
 const MESSAGES = [
   {
-    body:
-      "Hey, have you checked out react-animated-conversation??",
-    direction: "inbound",
+    body: "Hey, have you checked out react-animated-conversation??",
+    direction: Direction.Inbound,
     delay: 0,
   },
   {
     body: "No, what's that?",
-    direction: "inbound",
+    direction: Direction.Outbound,
     delay: 3000,
   },
-  { body: "Well, it makes generating these animated conversations easier.", direction: "outbound", delay: 3000 },
   {
-    body:
-      "Really? How's it work?",
-    direction: "inbound",
+    body: "Well, it makes generating these animated conversations easier.",
+    direction: Direction.Inbound,
     delay: 3000,
   },
-  { body: "Well, you just add this library and then you send it a messages Array", direction: "outbound", delay: 3000 },
   {
-    body:
-      "Wow, that's a ton easier than doing the HTML/CSS/JS yourself.",
-    direction: "inbound",
+    body: "Really? How's it work?",
+    direction: Direction.Outbound,
     delay: 3000,
   },
-  { body: "92130", direction: "outbound", delay: 3000 },
   {
     body:
-      "Absolutely.",
-    direction: "inbound",
+      "Well, you just add this library and then you send it a messages Array",
+    direction: Direction.Inbound,
+    delay: 3000,
+  },
+  {
+    body: "Wow, that's a ton easier than doing the HTML/CSS/JS yourself.",
+    direction: Direction.Outbound,
+    delay: 3000,
+  },
+  {
+    body: "Absolutely.",
+    direction: Direction.Inbound,
     delay: 3000,
   },
 ]

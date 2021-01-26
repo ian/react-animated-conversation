@@ -3,8 +3,8 @@ import Conversation from "./Conversation"
 import styles from "./AnimatedConversation.css"
 
 export enum Direction {
-  inbound = "inbound",
-  outbound = "outbound",
+  Inbound = "inbound",
+  Outbound = "outbound",
 }
 
 type Message = {
